@@ -67,7 +67,7 @@ const DropdownHolder=styled.div`
 
 const TextFont = styled.button`
   display: block;
-  background:gray;
+  background:silver;
   width: 140px;
   height:30px;
   z-index: 1;
@@ -119,9 +119,9 @@ export default class Nav extends Component{
           </DropDown>
         </Right>
         <Right>
-          <Links pagetoopen={this.props.sethomepage}>Home</Links>
-          <Links pagetoopen={this.props.sethomepage}>Art Work</Links>
-          <Links pagetoopen={this.props.sethomepage}>Projects</Links>
+          <Links onClick={() => this.props.changepage('projects')}>Projects</Links>
+          <Links onClick={() => this.props.changepage('artwork')}>Art Work</Links>
+          <Links onClick={() => this.props.changepage('home')}>Home</Links>
         </Right>
       </LinkHolder>
     </Navcontainer>

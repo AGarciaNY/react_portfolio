@@ -36,7 +36,7 @@ const Footer=()=>(
         <Header>More Informtion</Header>
       </HeadingCon>
       <div>
-          <Header>Contact Informtion</Header>
+          <Header>Contact Informtion Here</Header>
           <ContactHolder>
             <ContactInformationContainer>
               <img src="/img" alt=""/>

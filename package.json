@@ -3,14 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "firebase": "^6.3.5",
-=======
     "@emotion/core": "^10.0.15",
     "@emotion/styled": "^10.0.15",
     "firebase": "^6.3.5",
     "material-ui": "^0.20.2",
->>>>>>> this is my portfolio
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0"

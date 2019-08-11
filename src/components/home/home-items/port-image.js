@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import pig from '../../../img/pig.png';
+import pig from '../../../img/project-pics/pig.png';
 
 const ImageContaner = styled.div`
   display: flex;
