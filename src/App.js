@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Nav from './components/nav/nav';
+import Footer from './components/footer/footer';
+import Home from './components/home/home';
+import PortfolioComponent from './portfoliocomponent'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default class App extends PortfolioComponent{
+
+  constructor(props) {
+    super(props);
+    this.getSessionDatabaseRef().update({
+      homepage: false,
+      artpage: false,
+      projpage: false,
+    });
+  }
+
+  onSessionDataChanged(data) {
+    this.setState({
+      homepgae: data.homepage,
+      artpage: data.artpage,
+      projpage: data.projpage,
+    });
+  }
+
+  render(){
+    return (
+    <div id="body">
+      <Nav />
+      <Home 
+      sethomepage={this.state.homepage}
+      setartpage={this.state.artpage}
+      setprojpage={this.state.projpage}
+      />
+      <Footer />
     </div>
-  );
+    );
+  }
 }
 
-export default App;
