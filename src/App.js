@@ -31,7 +31,7 @@ export default class App extends Component{
       return (
       <div id="body">
         <Nav changepage={(page)=> this.pickAPage(page)}/>
-        <Projects />
+        <Home />
         <Footer />
       </div>
       );

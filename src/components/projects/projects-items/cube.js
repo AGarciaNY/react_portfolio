@@ -17,21 +17,28 @@ const Img = styled.img`
 `;
 
 const Title = styled.p`
-`;
+  color:white;
+  text-align:center;
+  font-weight: bold;
+
+  `;
 
 const Data = styled.p`
-
+  color:white;
+  font-size:12px;
 `;
 
 const Holder = styled.div`
 display: flex;
+flex-wrap: wrap;
+justify-content: center;
 `;
 
 const Box = styled.div`
   margin:30px;
   width:220px;
   height:300px;
-  background:#e3cfcf;
+  background:#353535;
   border-radius:30px;
   
 `;
@@ -39,7 +46,7 @@ const Box = styled.div`
 const Line= styled.div`
   width:220px;
   height:1px;
-  background-color:black;
+  background-color:white;
 `;
 
 const Boxes = ({name,nametwo,title,info})=>(
@@ -63,7 +70,7 @@ export default class Cube extends Component{
         <Boxes
           name={pig}
           nametwo={pig}
-          title="pigs are cool"
+          title="Pig Latinizer"
           info="teams are the best"
         />
         <Boxes

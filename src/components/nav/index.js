@@ -10,7 +10,7 @@ const Navcontainer = styled.div`
 `;
 
 const NameHolder=styled.div`
-width:300px;
+  width:300px;
 `;
 const MyName = styled.h1`
   margin:0;
@@ -33,13 +33,15 @@ const Links = styled.button`
   color:white;
   padding-left: 30px;
   font-size:16px;
+  
   &:hover{
     font-size:18px;
-}
+  }
 `;
 
 const DropDown = styled.div`
   padding-left: 30px;
+  
   &:hover div{
     display: block;
   }
@@ -52,9 +54,10 @@ const DropButton = styled.button`
   color:white;
   min-width: 140px;
   font-size:16px;
+
   &:hover{
     font-size:18px;
-}
+  }
 `;
 
 const DropdownHolder=styled.div`
@@ -75,6 +78,7 @@ const TextFont = styled.button`
   text-decoration: none;
   color:white;
   font-size:15px;
+
   &:hover{
     position:absolute;
     left:-10px;
@@ -90,19 +94,22 @@ const Right=styled.li`
 `;
 
 const Text = styled.div`
-width: 140px;
-height:30px;
-margin:3px 0;
-position:relative;
-&:hover{
-  margin:5px 0;
-}
+  width: 140px;
+  height:30px;
+  margin:3px 0;
+  position:relative;
+
+  &:hover{
+    margin:5px 0;
+  }
 `;
 
 export default class Nav extends Component{
 
   render(){
+
     return(
+
     <Navcontainer>
       <NameHolder>
         <MyName>Aldair's Portfolio</MyName>
@@ -127,6 +134,5 @@ export default class Nav extends Component{
     </Navcontainer>
     );
   }
-}
- 
 
+}
