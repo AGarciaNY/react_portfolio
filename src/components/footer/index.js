@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import mail from '../../img/icons/mail.png';
+import github from '../../img/icons/github.png';
+import linkin from '../../img/icons/linkin.png';
 
 const Container = styled.div`
   width:100%;
@@ -21,15 +24,28 @@ const ContactInformationContainer = styled.li`
   height:40px;
   display: flex;
   flex-direction: row;
+  position:relative;
+  colore:white;
 `;
 
-const Contact = styled.h1`
+const Contact = styled.a`
   font-size: 18px;
   margin: 0;
+  color:white;
+  text-decoration: none;
 `;
+
 const ContactHolder = styled.ul`
   list-style-type: none;
 `;
+
+const Icon = styled.img`
+  height:24px;
+  position:absolute;
+  left:-30px;
+  top:0;
+`;
+
 const Footer=()=>(
     <Container>
       <HeadingCon>
@@ -39,12 +55,16 @@ const Footer=()=>(
           <Header>Contact Informtion Here</Header>
           <ContactHolder>
             <ContactInformationContainer>
-              <img src="/img" alt=""/>
+              <Icon src={mail} alt={mail}/>
               <Contact>Aldairgarcia360@gmail.com</Contact>
             </ContactInformationContainer>
             <ContactInformationContainer>
-              <img src="/img" alt=""/>
+              <Icon src={github} alt={github}/>
               <Contact >AGarciaNY</Contact>
+            </ContactInformationContainer>
+            <ContactInformationContainer>
+              <Icon src={linkin} alt={github}/>
+              <Contact href='https://www.linkedin.com/in/aldair-g-b20525157/'>Aldair Garcia</Contact>
             </ContactInformationContainer>
           </ContactHolder>
       </div>
