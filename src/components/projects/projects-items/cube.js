@@ -13,7 +13,7 @@ const Img = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height:100px;
+  height: 140px;
 `;
 
 const Title = styled.p`
@@ -36,26 +36,31 @@ justify-content: center;
 
 const Box = styled.div`
   margin:30px;
-  width:220px;
-  height:300px;
+  width:300px;
+  height:150px;
   background:#353535;
   border-radius:30px;
-  
+  position:relative;
+  &:hover{
+    &>img{
+      visibility: hidden;
+    }
+  }
 `;
 
-const Line= styled.div`
-  width:220px;
-  height:1px;
-  background-color:white;
+const Information = styled.div`
+  position: absolute;
+  top:10px;
 `;
 
 const Boxes = ({name,nametwo,title,info})=>(
 
   <Box>
     <Img  alt={name} src={nametwo}/>
-    <Line/>
-    <Title>{title}</Title>
-    <Data>{info}</Data>
+    <Information>
+      <Title>{title}</Title>
+      <Data>{info}</Data>
+    </Information>
   </Box>
 
 );

@@ -13,7 +13,7 @@ const NameHolder=styled.div`
   width:300px;
 `;
 const MyName = styled.h1`
-  margin:0;
+  margin:0 0 0 40px;
   font-size: 30px
   width:200px;
 `;
