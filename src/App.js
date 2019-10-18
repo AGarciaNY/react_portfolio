@@ -1,26 +1,70 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react'
+//import { View, Text } from 'react-native';
 import './App.css';
+import firebase from 'firebase/app';
+import Nav from './components/nav';
+import Footer from './components/footer';
+import Home from './components/home';
+import ArtWork from './components/art-work';
+import Projects from './components/projects';
+// import firebaseConfig from './config';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component{
+  
+  constructor() {
+    super();
+    this.state = {
+      pickapage: 'test',
+    }
+  }
+
+  pickAPage = (page) => {
+    this.setState({
+      pickapage: page
+    });
+    console.log(page);
+  }  
+
+  render(){
+
+    if(this.state.pickapage === 'test'){
+      return (
+      <div id="body">
+        <Nav changepage={(page)=> this.pickAPage(page)}/>
+        <Home />
+        <Footer />
+      </div>
+      );
+    }
+
+    if(this.state.pickapage === 'home'){
+      return (
+        <div id="body">
+          <Nav changepage={(page)=> this.pickAPage(page)}/>
+          <Home />
+          <Footer />
+        </div>
+      )
+    }
+
+    if(this.state.pickapage === 'artwork'){
+      return (
+        <div id="body">
+          <Nav changepage={(page)=> this.pickAPage(page)}/>
+          <ArtWork />
+          <Footer />
+        </div>
+      )
+    }
+
+    if(this.state.pickapage === 'projects'){
+      return (
+        <div id="body">
+          <Nav changepage={(page)=> this.pickAPage(page)}/>
+          <Projects />
+          <Footer />
+        </div>
+      )
+    }
+  }
 }
-
-export default App;
