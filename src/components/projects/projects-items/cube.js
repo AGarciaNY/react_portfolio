@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import styled from '@emotion/styled';
+import Boxes from './boxes';
+
 import pig from '../../../img/project-pics/pig.png';
 import gif from '../../../img/project-pics/gif.png';
 import dhelper from '../../../img/project-pics/dhelper.png';
@@ -6,64 +9,12 @@ import hang from '../../../img/project-pics/hang.png';
 import hu from '../../../img/project-pics/hu.png';
 import rps from '../../../img/project-pics/rps.png';
 import school from '../../../img/project-pics/school.png';
-import styled from '@emotion/styled';
-
-
-const Img = styled.img`
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 140px;
-`;
-
-const Title = styled.p`
-  color:white;
-  text-align:center;
-  font-weight: bold;
-
-  `;
-
-const Data = styled.p`
-  color:white;
-  font-size:12px;
-`;
 
 const Holder = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 `;
-
-const Box = styled.div`
-  margin:30px;
-  width:300px;
-  height:150px;
-  background:#353535;
-  border-radius:30px;
-  position:relative;
-  &:hover{
-    &>img{
-      visibility: hidden;
-    }
-  }
-`;
-
-const Information = styled.div`
-  position: absolute;
-  top:10px;
-`;
-
-const Boxes = ({name,nametwo,title,info})=>(
-
-  <Box>
-    <Img  alt={name} src={nametwo}/>
-    <Information>
-      <Title>{title}</Title>
-      <Data>{info}</Data>
-    </Information>
-  </Box>
-
-);
 
 export default class Cube extends Component{
 
@@ -76,7 +27,7 @@ export default class Cube extends Component{
           name={pig}
           nametwo={pig}
           title="Pig Latinizer"
-          info="teams are the best"
+          info="teams are the best  joiajs jds oijdoa sdjas ojdo isaaj doij saodj oisaja dojs djsaoai  jdosajdo ijsaj dsja oid djo sia jdja sodj oa ssjd asjdoisj "
         />
         <Boxes
           name={gif}
