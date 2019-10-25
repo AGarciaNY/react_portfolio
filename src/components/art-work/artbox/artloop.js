@@ -9,10 +9,14 @@ const Box =styled.div`
   border-radius:50px;
 `;
 
+const Img = styled.img`
+  height:100px;
+`;
 
 const Artwork =({url,info,})=>(
 
   <Box>
+    <Img src={url} alt={url}/>
     <h1> hi man</h1>
   </Box>
 );
