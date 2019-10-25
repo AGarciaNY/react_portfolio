@@ -5,6 +5,8 @@ const Img = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   height: 140px;
 `;
 

@@ -56,15 +56,15 @@ const Footer=()=>(
           <ContactHolder>
             <ContactInformationContainer>
               <Icon src={mail} alt={mail}/>
-              <Contact>Aldairgarcia360@gmail.com</Contact>
+              <Contact target="_blank">Aldairgarcia360@gmail.com</Contact>
             </ContactInformationContainer>
             <ContactInformationContainer>
               <Icon src={github} alt={github}/>
-              <Contact >AGarciaNY</Contact>
+              <Contact href="https://github.com/AGarciaNY" target="_blank" >AGarciaNY</Contact>
             </ContactInformationContainer>
             <ContactInformationContainer>
               <Icon src={linkin} alt={github}/>
-              <Contact href='https://www.linkedin.com/in/aldair-g-b20525157/'>Aldair Garcia</Contact>
+              <Contact href='https://www.linkedin.com/in/aldair-g-b20525157/' target="_blank">Aldair Garcia</Contact>
             </ContactInformationContainer>
           </ContactHolder>
       </div>
