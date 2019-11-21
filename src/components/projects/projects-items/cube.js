@@ -17,54 +17,17 @@ justify-content: center;
 `;
 
 export default class Cube extends Component{
-
+  
+  // for (let i in this.props.namesList) {
+  //   let nameString = this.props.namesList[i];
+  //   namesLiList.push(<li key={i}>{nameString}</li>);
+  // }
   render(){
-    
+
     return(
 
       <Holder>
-        <Boxes
-          name={pig}
-          nametwo={pig}
-          title="Pig Latinizer"
-          info="teams are the best  joiajs jds oijdoa sdjas ojdo isaaj doij saodj oisaja dojs djsaoai  jdosajdo ijsaj dsja oid djo sia jdja sodj oa ssjd asjdoisj "
-        />
-        <Boxes
-          name={gif}
-          nametwo={gif}
-          title=""
-          info=""
-        />
-        <Boxes
-          name={dhelper}
-          nametwo={dhelper}
-          title=""
-          info=""
-        />
-        <Boxes
-          name={hang}
-          nametwo={hang}
-          title=""
-          info=""
-        />
-        <Boxes
-          name={hu}
-          nametwo={hu}
-          title=""
-          info=""
-        />
-        <Boxes
-          name={rps}
-          nametwo={rps}
-          title=""
-          info=""
-        />
-        <Boxes
-          name={school}
-          nametwo={school}
-          title=""
-          info=""
-        />
+        <Boxes/>
       </Holder>
 
     );

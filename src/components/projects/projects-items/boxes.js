@@ -1,5 +1,7 @@
-import React from 'react';
+import React,{Component} from 'react';
 import styled from '@emotion/styled';
+
+import data from '../myprojects'
 
 const Img = styled.img`
   display: block;
@@ -49,31 +51,34 @@ const TitleHolder = styled.div`
 `;
 
 const Box = styled.div`
-margin: 30px;
-width: 300px;
-height: 150px;
-background: #353535;
-border-radius: 30px;
-position: relative;
+  margin: 30px;
+  width: 300px;
+  height: 150px;
+  background: #353535;
+  border-radius: 30px;
+  position: relative;
 
-&:hover{
-
-  &>img{
-    visibility: hidden;
+  &:hover{
+    &>img{
+      visibility: hidden;
+    }
+    &>div{
+      visibility: visible;
+    }
+    &>button{
+      visibility: visible;
+    }
   }
-
-  &>div{
-    visibility: visible;
-  }
-  
-  &>button{
-    visibility: visible;
-  }
-}
 `;
 
-const Boxes = ({name,nametwo,title,info})=>(
-
+const openProject=(link)=>{
+  window.open(link)
+}
+// for (let i in this.props.namesList) {
+  //   let nameString = this.props.namesList[i];
+  //   namesLiList.push(<li key={i}>{nameString}</li>);
+  // }
+const sampel = ({name,nametwo,title,info,link})=>(
   <Box>
     <TitleHolder>
       <Title>{title}</Title>
@@ -82,8 +87,21 @@ const Boxes = ({name,nametwo,title,info})=>(
     <Information>
       <Data>{info}</Data>
     </Information>
-    <Button1>see it</Button1>
+    <Button1 onClick={() => openProject(link)}>see it</Button1>
   </Box>
 
 );
-export default Boxes;
+
+export default class Boxes extends Component{
+  
+  render(){
+
+    return(
+
+      <Holder>
+        <Boxes/>
+      </Holder>
+
+    );
+  }
+}
